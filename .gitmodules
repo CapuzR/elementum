@@ -1,0 +1,30 @@
+[submodule "bounty-rush/e-br-node"]
+	path = bounty-rush/e-br-node
+	url = https://github.com/CapuzR/e-br-node.git
+[submodule "bounty-rush/e-br-frontend"]
+	path = bounty-rush/e-br-frontend
+	url = https://github.com/CapuzR/e-br-frontend.git
+[submodule "bounty-rush/e-br-service"]
+	path = bounty-rush/e-br-service
+	url = https://github.com/CapuzR/e-br-service.git
+[submodule "general/e-profile"]
+	path = general/e-profile
+	url = https://github.com/CapuzR/e-profile.git
+[submodule "general/e-webapp"]
+	path = general/e-webapp
+	url = https://github.com/CapuzR/e-webapp.git
+[submodule "utilities/faucet"]
+	path = utilities/faucet
+	url = https://github.com/CapuzR/faucet.git
+[submodule "general/e-admin-frontend"]
+	path = general/e-admin-frontend
+	url = https://github.com/CapuzR/e-admin-frontend.git
+[submodule "general/e-asset-manager"]
+	path = general/e-asset-manager
+	url = https://github.com/CapuzR/e-asset-manager.git
+[submodule "general/e-tournament-manager"]
+	path = general/e-tournament-manager
+	url = https://github.com/CapuzR/e-tournament-manager.git
+[submodule "utilities/backups/e-br-backup"]
+	path = utilities/backups/e-br-backup
+	url = https://github.com/CapuzR/e-br-backup.git

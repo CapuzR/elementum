@@ -1,0 +1,10 @@
+{
+    "canisters": {
+      "icp_ledger": {
+        "type": "custom",
+        "wasm": "./ledger.wasm", 
+        "candid": "./ledger.did",
+        "build":[]
+      }
+    }
+}
