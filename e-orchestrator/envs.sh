@@ -3,7 +3,7 @@
 #ESP: REQUIERE UTILIZAR jq (sudo apt-get install jq | brew install jq)
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
-export ELEMENTUM_PATH=~/development/weavers-lab/elementumTest/elementum
+export ELEMENTUM_PATH=~/development/weavers-lab/elementumTest1/elementum
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -65,8 +65,10 @@ export E_PROFILE_ENV="local"
 
 export ALLOW_PRINCIPAL_0="mlvdq-eg2nv-zsiyw-gc5yk-mvwsn-wd3m6-a2d2i-tf2lf-xbpvu-yhfzb-sqe";
 export ALLOW_PRINCIPAL_1="lgohr-fe3ao-jglmh-aivsa-7j75w-d3bdc-ycmyi-qwtdn-zvcei-frnsl-oqe";
+
 export ADMINS_PRINCIPAL_0="mlvdq-eg2nv-zsiyw-gc5yk-mvwsn-wd3m6-a2d2i-tf2lf-xbpvu-yhfzb-sqe";
 export ADMINS_PRINCIPAL_1="ircn7-g7maa-v2zab-fgz7m-ofkss-eeskj-msyir-alras-riu7w-k5wrm-xqe";
+
 export TURN_MANAGER_PRINCIPAL_0="cygpo-4nsne-nbahj-py2bk-i7mw7-b4wht-iywa5-kdgxz-wvlxy-q64zn-qqe";
 export AUTH_PRINCIPAL_0="cygpo-4nsne-nbahj-py2bk-i7mw7-b4wht-iywa5-kdgxz-wvlxy-q64zn-qqe";
 #TODO:
@@ -80,8 +82,6 @@ export AUTH_PRINCIPAL_0="cygpo-4nsne-nbahj-py2bk-i7mw7-b4wht-iywa5-kdgxz-wvlxy-q
 #Eng: Accounts Ids to transfer fake currencies in local ledgers.
 #-----------------------------------------
 #Esp: AccountId donde se transferirán monedas falsas en los ledgers locales.
-
-export ICP_PRINCIPALS0="principal \"mlvdq-eg2nv-zsiyw-gc5yk-mvwsn-wd3m6-a2d2i-tf2lf-xbpvu-yhfzb-sqe\"; principal \"ircn7-g7maa-v2zab-fgz7m-ofkss-eeskj-msyir-alras-riu7w-k5wrm-xqe";
 
 export ICP_PRINCIPALS=(
     "mlvdq-eg2nv-zsiyw-gc5yk-mvwsn-wd3m6-a2d2i-tf2lf-xbpvu-yhfzb-sqe" 
