@@ -3,7 +3,7 @@
 #ESP: REQUIERE UTILIZAR jq (sudo apt-get install jq | brew install jq)
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
-export ELEMENTUM_PATH=~/development/weavers-lab/Elementum/elementum
+export ELEMENTUM_PATH=~/development/weavers-lab/elementum/elementum
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -121,7 +121,7 @@ export NODE_SEEDPHRASE="ricardo ricardo ricardo ricardo ricardo ricardo ricardo 
 #Eng: Define if you want to start multiple projects or just one. If one, define which.
 #-----------------------------------------
 #Esp: Define si quieres iniciar varios proyectos o solo uno. Si es silo uno, define cuál.
-export EXECUTION_TYPE="individual" # Options: individual, multiple
+export EXECUTION_TYPE="multiple" # Options: individual, multiple
 #TODO:
 # export INDIVIDUAL_PROJECT_NAME="E_ASSET_MANAGER" # Options: <PROJECT_FULL_NAME>, *empty* (Is empty in case EXECUTION_TYPE is multiple)
 
