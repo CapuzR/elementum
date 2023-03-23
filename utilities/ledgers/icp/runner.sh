@@ -5,7 +5,7 @@
 # #Esp: Instalación de la ICP LEDGER.
 ICP_LEDGER_PATH=$ELEMENTUM_PATH"/utilities/ledgers/icp"
 
-. ./envs.sh
+. ./settings.sh
 cd $ICP_LEDGER_PATH
 
 #Eng: Define multiple identities necessary to start Elementum ecosystem.
