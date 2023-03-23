@@ -28,10 +28,10 @@ La carpeta assets tiene la siguiente estructura:
 ├── assets
 │   ├── build
 │   │   ├── Build
-│   │   |   ├── Build.data
-│   │   |   ├── Build.framework
-│   │   |   ├── Build.loader
-│   │   |   ├── Build.wasm
+│   │   │   ├── Build.data
+│   │   │   ├── Build.framework
+│   │   │   ├── Build.loader
+│   │   │   ├── Build.wasm
 │   │   ├── dependencies.txt
 │   │   ├── GUID.txt
 │   │   ├── ProjectVersion.txt
