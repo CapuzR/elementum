@@ -11,12 +11,12 @@ This projects contains the folder structure for all Elementum projects and modul
  4. Run the project on elementum/e-orchestration terminal with ./start.sh
 
   ** Asset folder presents the following structure:
-   -assets
-     -build
-       -Build
-       -dependencies.txt
-       -GUID.txt
-       -ProjectVersion.txt
+-assets
+---build
+------Build
+------dependencies.txt
+------GUID.txt
+------ProjectVersion.txt
 
 ### Español
  
@@ -30,9 +30,9 @@ Este proyecto contiene la estructura de carpetas para todos los proyectos y mód
   4. Ejecuta el proyecto en la terminal elementum/e-orchestration con ./start.sh
 
   ** La carpeta assets tiene la siguiente estructura:
-   -assets
-     -build
-       -Build
-       -dependencies.txt
-       -GUID.txt
-       -ProjectVersion.txt
+-assets
+---build
+------Build
+------dependencies.txt
+------GUID.txt
+------ProjectVersion.txt
