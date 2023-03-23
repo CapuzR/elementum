@@ -3,14 +3,14 @@
 #ESP: REQUIERE UTILIZAR jq (sudo apt-get install jq | brew install jq)
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
-export ELEMENTUM_PATH=~/development/weavers-lab/elementumTest3/elementum
+export ELEMENTUM_PATH=~/development/weavers-lab/Elementum/elementum
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
 #Eng: Define if you want to clean replica. Options: true, false. If true, Install_mode should be "none".
 #-----------------------------------------
 #Esp: Define si quieres borrar toda la réplica (perder toda la data local). Opciones: true, false. Si es tru, Install_mode debe ser "none".
-export CLEAN="false"
+export CLEAN="true"
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ export CLEAN="false"
 #-----------------------------------------
 #Esp: Modo en el que se realizará la instalación del wasm en el canister. Opciones: upgrade, reinstall, none
 
-export INSTALL_MODE="upgrade"
+export INSTALL_MODE="none"
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -26,15 +26,15 @@ export INSTALL_MODE="upgrade"
 #-----------------------------------------
 #Esp: Proyectos que necesitas correr. Solo actívalos y desactívalos de acuerdo a lo que necesites. Opciones: true, false.
 
-export HAS_ICP_LEDGER="false"
-export HAS_E_BR_SERVICE="false"
-export HAS_E_PROFILE="false"
-export HAS_E_ASSET_MANAGER="false"
-export HAS_E_TOURNAMENT_MANAGER="false"
+export HAS_ICP_LEDGER="true"
+export HAS_E_BR_SERVICE="true"
+export HAS_E_PROFILE="true"
+export HAS_E_ASSET_MANAGER="true"
+export HAS_E_TOURNAMENT_MANAGER="true"
 export HAS_E_BR_FRONTEND="true"
-export HAS_E_ADMIN_FRONTEND="false"
-export HAS_E_WEBAPP="false"
-export HAS_E_BR_NODE="false"
+export HAS_E_ADMIN_FRONTEND="true"
+export HAS_E_WEBAPP="true"
+export HAS_E_BR_NODE="true"
 
 export HAS_E_BR_BACKUP="false"
 export HAS_FAUCET="false"

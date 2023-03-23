@@ -3,7 +3,7 @@
 . ./config.sh
 chmod -R 777 $ELEMENTUM_PATH
 #/////////////////////////////////////////////////////////////////////////////////////////////////
-
+sudo apt-get install jq
 #Eng: Start the replica with the clean status dev decide.
 #-----------------------------------------
 #Esp: Inicia la Replica dependiendo de si se desea de cero o solo activarla.
