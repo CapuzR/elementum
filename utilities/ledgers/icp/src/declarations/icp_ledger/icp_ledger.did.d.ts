@@ -5,7 +5,9 @@ export interface Account {
   'owner' : Principal,
   'subaccount' : [] | [Subaccount],
 }
+export type AccountIdentifier_old = Uint8Array | number[];
 export type BlockIndex = bigint;
+export type BlockIndex_old = bigint;
 export type Duration = bigint;
 export interface InitArgs {
   'token_symbol' : string,
@@ -23,9 +25,13 @@ export interface InitArgs {
   },
   'token_name' : string,
 }
+export type Memo_old = bigint;
+export type SubAccount_old = Uint8Array | number[];
 export type Subaccount = Uint8Array | number[];
+export interface TimeStamp_old { 'timestamp_nanos' : bigint }
 export type Timestamp = bigint;
 export type Tokens = bigint;
+export interface Tokens_old { 'e8s' : bigint }
 export interface TransferArg {
   'to' : Account,
   'fee' : [] | [Tokens],
@@ -33,6 +39,14 @@ export interface TransferArg {
   'from_subaccount' : [] | [Subaccount],
   'created_at_time' : [] | [Timestamp],
   'amount' : Tokens,
+}
+export interface TransferArgs_old {
+  'to' : AccountIdentifier_old,
+  'fee' : Tokens_old,
+  'memo' : Memo_old,
+  'from_subaccount' : [] | [SubAccount_old],
+  'created_at_time' : [] | [TimeStamp_old],
+  'amount' : Tokens_old,
 }
 export type TransferError = {
     'GenericError' : { 'message' : string, 'error_code' : bigint }
@@ -44,8 +58,17 @@ export type TransferError = {
   { 'CreatedInFuture' : { 'ledger_time' : bigint } } |
   { 'TooOld' : null } |
   { 'InsufficientFunds' : { 'balance' : Tokens } };
+export type TransferError_old = {
+    'TxTooOld' : { 'allowed_window_nanos' : bigint }
+  } |
+  { 'BadFee' : { 'expected_fee' : Tokens_old } } |
+  { 'TxDuplicate' : { 'duplicate_of' : BlockIndex_old } } |
+  { 'TxCreatedInFuture' : null } |
+  { 'InsufficientFunds' : { 'balance' : Tokens_old } };
 export type TransferResult = { 'Ok' : BlockIndex } |
   { 'Err' : TransferError };
+export type TransferResult_old = { 'Ok' : BlockIndex_old } |
+  { 'Err' : TransferError_old };
 export type Value = { 'Int' : bigint } |
   { 'Nat' : bigint } |
   { 'Blob' : Uint8Array | number[] } |
@@ -64,4 +87,5 @@ export interface _SERVICE {
   'icrc1_symbol' : ActorMethod<[], string>,
   'icrc1_total_supply' : ActorMethod<[], Tokens>,
   'icrc1_transfer' : ActorMethod<[TransferArg], TransferResult>,
+  'transfer' : ActorMethod<[TransferArgs_old], TransferResult_old>,
 }

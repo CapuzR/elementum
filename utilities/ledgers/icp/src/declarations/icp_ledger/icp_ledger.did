@@ -62,6 +62,48 @@ type InitArgs = record {
     };
 };
 
+//----------------------------
+//  Old ICP Token Interface.
+//----------------------------
+
+type Tokens_old = record {
+     e8s : nat64;
+};
+
+type TimeStamp_old = record {
+    timestamp_nanos: nat64;
+};
+
+type AccountIdentifier_old = blob;
+
+type SubAccount_old = blob;
+
+type BlockIndex_old = nat64;
+
+type Memo_old = nat64;
+
+type TransferError_old = variant {
+    BadFee : record { expected_fee : Tokens_old; };
+    InsufficientFunds : record { balance: Tokens_old; };
+    TxTooOld : record { allowed_window_nanos: nat64 };
+    TxCreatedInFuture : null;
+    TxDuplicate : record { duplicate_of: BlockIndex_old; }
+};
+
+type TransferResult_old = variant {
+    Ok : BlockIndex_old;
+    Err : TransferError_old;
+};
+
+type TransferArgs_old = record {
+    memo: Memo_old;
+    amount: Tokens_old;
+    fee: Tokens_old;
+    from_subaccount: opt SubAccount_old;
+    to: AccountIdentifier_old;
+    created_at_time: opt TimeStamp_old;
+};
+
 service : (InitArgs) -> {
     icrc1_name : () -> (text) query;
     icrc1_symbol : () -> (text) query;
@@ -74,4 +116,6 @@ service : (InitArgs) -> {
     icrc1_balance_of : (Account) -> (Tokens) query;
     icrc1_transfer : (TransferArg) -> (TransferResult);
     icrc1_supported_standards : () -> (vec record { name : text; url : text }) query;
+
+    transfer : (TransferArgs_old) -> (TransferResult_old);
 }

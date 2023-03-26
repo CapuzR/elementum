@@ -54,6 +54,31 @@ export const idlFactory = ({ IDL }) => {
     'Ok' : BlockIndex,
     'Err' : TransferError,
   });
+  const AccountIdentifier_old = IDL.Vec(IDL.Nat8);
+  const Tokens_old = IDL.Record({ 'e8s' : IDL.Nat64 });
+  const Memo_old = IDL.Nat64;
+  const SubAccount_old = IDL.Vec(IDL.Nat8);
+  const TimeStamp_old = IDL.Record({ 'timestamp_nanos' : IDL.Nat64 });
+  const TransferArgs_old = IDL.Record({
+    'to' : AccountIdentifier_old,
+    'fee' : Tokens_old,
+    'memo' : Memo_old,
+    'from_subaccount' : IDL.Opt(SubAccount_old),
+    'created_at_time' : IDL.Opt(TimeStamp_old),
+    'amount' : Tokens_old,
+  });
+  const BlockIndex_old = IDL.Nat64;
+  const TransferError_old = IDL.Variant({
+    'TxTooOld' : IDL.Record({ 'allowed_window_nanos' : IDL.Nat64 }),
+    'BadFee' : IDL.Record({ 'expected_fee' : Tokens_old }),
+    'TxDuplicate' : IDL.Record({ 'duplicate_of' : BlockIndex_old }),
+    'TxCreatedInFuture' : IDL.Null,
+    'InsufficientFunds' : IDL.Record({ 'balance' : Tokens_old }),
+  });
+  const TransferResult_old = IDL.Variant({
+    'Ok' : BlockIndex_old,
+    'Err' : TransferError_old,
+  });
   return IDL.Service({
     'icrc1_balance_of' : IDL.Func([Account], [Tokens], ['query']),
     'icrc1_decimals' : IDL.Func([], [IDL.Nat8], ['query']),
@@ -73,6 +98,7 @@ export const idlFactory = ({ IDL }) => {
     'icrc1_symbol' : IDL.Func([], [IDL.Text], ['query']),
     'icrc1_total_supply' : IDL.Func([], [Tokens], ['query']),
     'icrc1_transfer' : IDL.Func([TransferArg], [TransferResult], []),
+    'transfer' : IDL.Func([TransferArgs_old], [TransferResult_old], []),
   });
 };
 export const init = ({ IDL }) => {

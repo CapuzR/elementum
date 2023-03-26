@@ -46,7 +46,7 @@ then
         token_symbol = opt "FICP";
         minting_account = "'${MINT_ACC}'";
         transfer_fee = opt record{ e8s = 10_000 };
-        initial_values = vec { record { "'${LEDGER_ACC}'"; record { e8s=100_000_000_000 } }; record { "'${TEST_ACC}'"; record { e8s=100_000_000_000 } }; };
+        initial_values = vec { record { "'${LEDGER_ACC}'"; record { e8s=1_000_000_000_000_000_000 } }; record { "'${TEST_ACC}'"; record { e8s=1_000_000_000_000_000_000 } }; };
         send_whitelist = vec {};
     })' >/dev/null
 else
@@ -55,7 +55,7 @@ else
         token_symbol = opt "FICP";
         minting_account = "'${MINT_ACC}'";
         transfer_fee = opt record{ e8s = 10_000 };
-        initial_values = vec { record { "'${LEDGER_ACC}'"; record { e8s=100_000_000_000 } }; record { "'${TEST_ACC}'"; record { e8s=100_000_000_000 } }; };
+        initial_values = vec { record { "'${LEDGER_ACC}'"; record { e8s=1_000_000_000_000_000_000 } }; record { "'${TEST_ACC}'"; record { e8s=1_000_000_000_000_000_000 } }; };
         send_whitelist = vec {};
     })' >/dev/null
 fi
@@ -74,7 +74,7 @@ do
         from_subaccount = null;
         created_at_time = null;
         memo = null;
-        amount = 2_000_000_000
+        amount = 2_000_000_000_000
     })' >/dev/null
 done
 
