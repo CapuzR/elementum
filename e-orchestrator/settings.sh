@@ -10,7 +10,7 @@ export ELEMENTUM_PATH=~/development/weavers-lab/elementum/elementum
 #Eng: Define if you want to clean replica. Options: true, false. If true, Install_mode should be "none".
 #-----------------------------------------
 #Esp: Define si quieres borrar toda la réplica (perder toda la data local). Opciones: true, false. Si es tru, Install_mode debe ser "none".
-export CLEAN="false"
+export CLEAN="true"
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ export CLEAN="false"
 #-----------------------------------------
 #Esp: Modo en el que se realizará la instalación del wasm en el canister. Opciones: upgrade, reinstall, none
 
-export INSTALL_MODE="upgrade"
+export INSTALL_MODE="none"
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -26,15 +26,15 @@ export INSTALL_MODE="upgrade"
 #-----------------------------------------
 #Esp: Proyectos que necesitas correr. Solo actívalos y desactívalos de acuerdo a lo que necesites. Opciones: true, false.
 
-export HAS_ICP_LEDGER="false"
+export HAS_ICP_LEDGER="true"
 export HAS_E_BR_SERVICE="true"
-export HAS_E_PROFILE="false"
-export HAS_E_ASSET_MANAGER="false"
-export HAS_E_TOURNAMENT_MANAGER="false"
-export HAS_E_BR_FRONTEND="false"
-export HAS_E_ADMIN_FRONTEND="false"
-export HAS_E_WEBAPP="false"
-export HAS_E_BR_NODE="false"
+export HAS_E_PROFILE="true"
+export HAS_E_ASSET_MANAGER="true"
+export HAS_E_TOURNAMENT_MANAGER="true"
+export HAS_E_BR_FRONTEND="true"
+export HAS_E_ADMIN_FRONTEND="true"
+export HAS_E_WEBAPP="true"
+export HAS_E_BR_NODE="true"
 
 #TODO:
 export HAS_E_BR_BACKUP="false"
@@ -123,7 +123,7 @@ export NODE_SEEDPHRASE="ricardo ricardo ricardo ricardo ricardo ricardo ricardo 
 #Eng: Define if you want to start multiple projects or just one. If one, define which.
 #-----------------------------------------
 #Esp: Define si quieres iniciar varios proyectos o solo uno. Si es silo uno, define cuál.
-export EXECUTION_TYPE="invidual" # Options: individual, multiple
+export EXECUTION_TYPE="multiple" # Options: individual, multiple
 #TODO:
 # export INDIVIDUAL_PROJECT_NAME="E_ASSET_MANAGER" # Options: <PROJECT_FULL_NAME>, *empty* (Is empty in case EXECUTION_TYPE is multiple)
 
