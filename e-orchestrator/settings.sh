@@ -31,9 +31,9 @@ export HAS_E_BR_SERVICE="false"
 export HAS_E_PROFILE="false"
 export HAS_E_ASSET_MANAGER="false"
 export HAS_E_TOURNAMENT_MANAGER="false"
-export HAS_E_BR_FRONTEND="true"
+export HAS_E_BR_FRONTEND="false"
 export HAS_E_ADMIN_FRONTEND="false"
-export HAS_E_WEBAPP="false"
+export HAS_E_WEBAPP="true"
 export HAS_E_BR_NODE="false"
 
 #TODO:
