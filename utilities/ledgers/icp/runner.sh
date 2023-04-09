@@ -54,7 +54,7 @@ else
         token_name = opt "Fake ICP";
         token_symbol = opt "FICP";
         minting_account = "'${MINT_ACC}'";
-        transfer_fee = opt record{ e8s = 10_000 };
+        transfer_fee = opt record{ e8s = 0 };
         initial_values = vec { record { "'${LEDGER_ACC}'"; record { e8s=1_000_000_000_000_000_000 } }; record { "'${TEST_ACC}'"; record { e8s=1_000_000_000_000_000_000 } }; };
         send_whitelist = vec {};
     })' >/dev/null
